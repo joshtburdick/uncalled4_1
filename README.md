@@ -437,3 +437,8 @@ All tracks must be written to the same database for multi-track visualization an
   - Changed all positional arguments to flags
 - v4.0.0:  Pre-print release
 For earlier development history, see https://github.com/skovaka/UNCALLED/tree/dev4
+
+## Changes in uncalled4_1 fork:
+- FAST5 support is now imported lazily, which removes dependency on `ont_fast5_api`
+  (and thus `pkg_resources`, which was removed in Python 3.12). This should
+  allow installing in Python 3.12 (if FAST5 support isn't needed.)
