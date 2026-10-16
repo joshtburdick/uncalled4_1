@@ -11,7 +11,6 @@ import _uncalled4
 import numpy as np
 import pandas as pd
 import sys, os
-from ont_fast5_api.fast5_interface import get_fast5_file
 
 class Tombo(TrackIO):
     FORMAT = "tombo"

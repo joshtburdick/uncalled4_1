@@ -10,7 +10,6 @@ import re
 from uuid import UUID
 from types import SimpleNamespace
 
-from ont_fast5_api.fast5_interface import get_fast5_file
 import pyslow5
 import pod5
 
@@ -365,6 +364,7 @@ class ReaderBase:
 
 class Fast5Reader(ReaderBase):
     def __init__(self, filename):
+        from ont_fast5_api.fast5_interface import get_fast5_file
         ReaderBase.__init__(self)
         self.infile = get_fast5_file(filename, mode="r")
 
